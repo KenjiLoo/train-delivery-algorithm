@@ -98,7 +98,7 @@ The `Delivery` class handles the core functionality of the delivery scheduling a
 3. **Finding Best Train:** For each package, the `find_best_train` method identifies the best train available based on proximity and capacity.
 4. **Moving Train to Pickup:** If the train is not at the package's starting node, the `shortest_path` method calculates the shortest route to the starting node, and the train is moved using the `move_train` method.
 5. **Picking Up Package:** The `pickup_package` method adds the package to the train.
-6. **Moving Train to Deliver:** The `shortest_path` method calculates the shortest route to the destination node, and the train is moved using the `move_train` method. The package is removed from the train once it reaches the destination.
+6. **Moving Train to Deliver:** The `shortest_path` method calculates the shortest route to the destination node using the Djikstra Algorithm, and the train is moved using the `move_train` method. The package is removed from the train once it reaches the destination.
 7. **Dropping Off Package:** The `dropoff_package` method updates the train's capacity after dropping off the package.
 8. **Recording State:** Each step of the process is recorded and printed using the `record_state` method.
 9. **Completion:** The total time taken for all deliveries is printed at the end of the scheduling process.
