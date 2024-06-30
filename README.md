@@ -4,6 +4,8 @@
 
 This script is designed to schedule and optimize the delivery of packages using a fleet of trains on a given network of nodes and edges. The main functionality is encapsulated in the `Delivery` class, which includes methods for scheduling deliveries, calculating routes, and handling train movements.
 
+**this code supports data input via console, or you may uncomment the input section to hardcode data
+
 ## Class and Methods Documentation
 
 ### `Delivery`
