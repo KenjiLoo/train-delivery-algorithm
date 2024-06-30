@@ -51,7 +51,11 @@ class Delivery:
                 # remove package from train
                 train = self.dropoff_package(train, package)
 
-            ending_statement = f"Takes {self.time} minutes in total."
+            if self.time > 0:
+                ending_statement = f"Takes {self.time} minutes in total."
+            else:
+                ending_statement = 'Delivery not possible'
+
             print('----------------------------------')
             print(ending_statement)
         return
@@ -208,7 +212,7 @@ class Delivery:
 ######################################################################################################
 # GET USER INPUT
 
-# uncomment to hardcode input
+# uncomment to hardcode inpit
 # nodes = [
 #     {'NodeName': 'A'},
 #     {'NodeName': 'B'},
@@ -286,4 +290,8 @@ trains = input_trains()
 
 # Initialize and run the scheduler
 delivery = Delivery(nodes, edges, packages, trains)
-delivery.scheduler()
+
+try:
+    delivery.scheduler()
+except KeyError:
+    print('Delivery not possible.')
