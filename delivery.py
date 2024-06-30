@@ -208,7 +208,7 @@ class Delivery:
 ######################################################################################################
 # GET USER INPUT
 
-# uncomment to hardcode inpit
+# uncomment to hardcode input
 # nodes = [
 #     {'NodeName': 'A'},
 #     {'NodeName': 'B'},
